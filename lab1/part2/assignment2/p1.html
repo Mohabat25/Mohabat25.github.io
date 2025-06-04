@@ -17,7 +17,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Mozilla splash page</title>
+    <!-- Added a text which is given by you in the document.-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- Added a style-->
     <style>
       /* header and body setup */
 
@@ -110,16 +112,16 @@
     </style>
   </head>
   <body>
+    <!-- Added a logo and title-->
     <header>
       <h1>Mozilla</h1>
-      <!-- insert <img> element, link to the small
-          version of the Firefox logo -->
+      <img src="firefox_logo-only_RGB.png" alt="logo">
 
     </header>
-
+    <!-- Added a youtube video and the text-->
     <main>
       <article>
-        <!-- insert iframe from youtube -->
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg?si=eILJ8McXtQBF1NYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -127,26 +129,26 @@
 
         <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
       </article>
-
+    <!-- Added a images-->
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img src="firefox_logo-only_RGB.png" alt="logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img>
+          <img src="mozilla-dinosaur-head.png" alt="mozilla dinasour">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img src="firefox-addons.jpg" alt="mozilla addons">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="mdn.svg" alt="mozilla mdn">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
+        <img src="red-panda.jpg" alt="panda">
       </div>
 
     </main>
