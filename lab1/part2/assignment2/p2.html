@@ -52,72 +52,13 @@ caption {
   <body>
     <h1>Table template</h1>
    <table>
-<!-- 
-Name: Mohabatjit Singh
-File: p2.html
-Date: 5 June 2025
-Description: A page showing planet data in an HTML table.
--->
-
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Planet Table</title>
-  <style>
-    html {
-      font-family: sans-serif;
-    }
-
-    table {
-      border-collapse: collapse;
-      border: 2px solid rgb(200,200,200);
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-    }
-
-    td, th {
-      border: 1px solid rgb(190,190,190);
-      padding: 10px 20px;
-    }
-
-    th {
-      background-color: rgb(235,235,235);
-    }
-
-    td {
-      text-align: center;
-    }
-
-    tr:nth-child(even) td {
-      background-color: rgb(250,250,250);
-    }
-
-    tr:nth-child(odd) td {
-      background-color: rgb(245,245,245);
-    }
-
-    caption {
-      padding: 10px;
-      caption-side: top;
-    }
-
-    td[colspan] {
-      text-align: left;
-    }
-  </style>
-</head>
-<body>
-
-  <table>
     <caption>
       Data about the planets of our solar system (Planetary facts taken from 
       <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).
     </caption>
     <thead>
       <tr>
-        <th colspan="2"></th>
+        <td colspan="2"></td>
         <th>Name</th>
         <th>Mass (10<sup>24</sup>kg)</th>
         <th>Diameter (km)</th>
@@ -133,8 +74,8 @@ Description: A page showing planet data in an HTML table.
     <tbody>
       <!-- Terrestrial planets -->
       <tr>
-        <td rowspan="4" colspan="2">Terrestrial planets</td>
-        <td>Mercury</td>
+        <th rowspan="4" colspan="2">Terrestrial planets</th>
+        <th>Mercury</th>
         <td>0.330</td>
         <td>4,879</td>
         <td>5427</td>
@@ -146,7 +87,7 @@ Description: A page showing planet data in an HTML table.
         <td>Closest to the Sun</td>
       </tr>
       <tr>
-        <td>Venus</td>
+        <th>Venus</th>
         <td>4.87</td>
         <td>12,104</td>
         <td>5243</td>
@@ -158,7 +99,7 @@ Description: A page showing planet data in an HTML table.
         <td></td>
       </tr>
       <tr>
-        <td>Earth</td>
+        <th>Earth</th>
         <td>5.97</td>
         <td>12,756</td>
         <td>5514</td>
@@ -170,7 +111,7 @@ Description: A page showing planet data in an HTML table.
         <td>Our world</td>
       </tr>
       <tr>
-        <td>Mars</td>
+        <th>Mars</th>
         <td>0.642</td>
         <td>6,792</td>
         <td>3933</td>
