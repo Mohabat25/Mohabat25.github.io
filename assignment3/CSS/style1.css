@@ -8,10 +8,13 @@ body {
 }
 
 h1 {
-  color: #375e97;
+    /**Make the level one heading pink, using the CSS color keyword hotpink.*/
+  color: hotpink;
   font-size: 2em;
   font-family: Georgia, "Times New Roman", Times, serif;
-  border-bottom: 1px solid #375e97;
+  /**Give the heading a 10px dotted border-bottom which uses the CSS color keyword purple.*/
+  border-bottom: 10px dotted purple;
+  
 }
 
 h2 {
