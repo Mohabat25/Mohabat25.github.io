@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Gallery</title>
+  <style>
+    /* Container for full image */
+    .full-img {
+      position: relative;
+      width: 600px;
+      margin-bottom: 20px;
+    }
+
+    /* Main displayed image */
+    .displayed-img {
+      width: 100%;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Overlay div for darken effect */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 2;
+      pointer-events: none;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Darken/lighten button */
+    button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 3;
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Thumbnail bar container */
+    .thumb-bar {
+      width: 600px;
+      overflow: hidden;
+    }
+
+    /* Thumbnails */
+    .thumb-bar img {
+      width: 20%;
+      float: left;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Hover effect */
+    .thumb-bar img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="full-img">
+    <img class="displayed-img" src="images/pic1.jpg" alt="Close-up of a human eye with green iris and visible eyelashes" />
+    <div class="overlay"></div>
+    <button class="dark">Darken</button>
+  </div>
+
+  <div class="thumb-bar"></div>
+
+  <script>
+    // Image file list
+    const images = [
+      'pic1.jpg',
+      'pic2.jpg',
+      'pic3.jpg',
+      'pic4.jpg',
+      'pic5.jpg'
+    ];
+
+    // Descriptive alt text
+    const altTexts = {
+      'pic1.jpg': 'Close-up of a human eye with green iris and visible eyelashes',
+      'pic2.jpg': 'Rock formation resembling an ocean wave, taken in sunlight',
+      'pic3.jpg': 'Cluster of purple and white pansies with yellow centers',
+      'pic4.jpg': 'Modern building wall with geometric pattern and white tiles',
+      'pic5.jpg': 'Large brown moth resting on a leafy green plant'
+    };
+
+    // DOM references
+    const thumbBar = document.querySelector('.thumb-bar');
+    const displayedImg = document.querySelector('.displayed-img');
+    const btn = document.querySelector('button');
+    const overlay = document.querySelector('.overlay');
+
+    // Generate thumbnails
+    for (const imgName of images) {
+      const newImage = document.createElement('img');
+      newImage.src = `images/${imgName}`;
+      newImage.alt = altTexts[imgName];
+
+      // On click, update main display
+      newImage.addEventListener('click', () => {
+        displayedImg.src = newImage.src;
+        displayedImg.alt = newImage.alt;
+      });
+
+      thumbBar.appendChild(newImage);
+    }
+
+    // Toggle overlay effect
+    btn.addEventListener('click', () => {
+      const currentClass = btn.getAttribute('class');
+
+      if (currentClass === 'dark') {
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+      } else {
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      }
+    });
+  </script>
+</body>
+</html>
