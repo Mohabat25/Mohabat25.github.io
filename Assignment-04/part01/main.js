@@ -1,3 +1,8 @@
+ //Name: Mohabatjit Singh
+ //File: Part1.html 
+ //Date: 31 July 2025 
+ //JAVASCRIPT silly story generator.
+
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
