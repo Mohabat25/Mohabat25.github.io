@@ -11,9 +11,26 @@ const altTexts = {
   'pic4.jpg': 'Forest trail',
   'pic5.jpg': 'Snowy cabin in woods'
 };
-
+images.forEach(filename => {
 const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
+newImage.setAttribute('src', `images/${filename}`);
+newImage.setAttribute('alt', altTexts[filename]);
 thumbBar.appendChild(newImage);
+newImage.addEventListener('click', () => {
+    displayedImage.src = newImage.src;
+    displayedImage.alt = newImage.alt;
+  });
+});
 
+// Darken/Lighten button toggle
+btn.addEventListener('click', () => {
+  if (btn.className === 'dark') {
+    btn.className = '';
+    btn.textContent = 'Darken';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+  } else {
+    btn.className = 'dark';
+    btn.textContent = 'Lighten';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  }
+});
