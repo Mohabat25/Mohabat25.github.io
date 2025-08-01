@@ -21,8 +21,6 @@ newImage.addEventListener('click', () => {
     displayedImage.alt = newImage.alt;
   });
 });
-
-// Darken/Lighten button toggle
 btn.addEventListener('click', () => {
   if (btn.className === 'dark') {
     btn.className = '';
