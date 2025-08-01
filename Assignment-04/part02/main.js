@@ -1,3 +1,7 @@
+// Name: Mohabatjit Singh
+// File: main.js
+// Date: 1 August 2025
+// JavaScript for the interactive image gallery
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
