@@ -38,3 +38,30 @@ class Ball {
     this.y += this.velY;
   }
 }
+let balls = [];
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    random(size, width - size),
+    random(size, height - size),
+    random(-5, 5),
+    random(-5, 5),
+    randomColor(),
+    size
+  );
+
+  balls.push(ball);
+}
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (let i = 0; i < balls.length; i++) {
+    balls[i].draw();
+    balls[i].update();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();
