@@ -1,3 +1,7 @@
+// Name: Mohabatjit Singh
+// File: main.js
+// Date: 1 August 2025
+// JavaScript for the bouncing balls animation
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
